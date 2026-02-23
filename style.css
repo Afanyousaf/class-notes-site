@@ -1,0 +1,374 @@
+/* --- Reset & Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #6c63ff;
+    --dark-bg: #1a1a1a;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(135deg, #6c63ff 0%, #8e84fc 100%);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.skills-tags {
+    margin: 25px 0 35px 0;
+}
+
+.skills-tags span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    margin: 5px 5px 5px 0;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* --- Styled Image Integration --- */
+.hero-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Classes Section --- */
+.classes {
+    padding: 100px 0;
+    background-color: #fcfcfc;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.class-card {
+    background: var(--white);
+    padding: 40px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.class-card:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-10px);
+}
+
+/* --- Footer --- */
+/* --- Contact Details Styling --- */
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between icon and text */
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.contact-details i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    width: 20px;
+    /* Keeps icons aligned vertically */
+}
+
+.contact-details a {
+    color: #bbb;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-details a:hover {
+    color: #25D366;
+    /* WhatsApp Green */
+}
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 80px 0 30px 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333;
+}
+
+.footer-info p {
+    margin-top: 15px;
+    color: #bbb;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    margin-bottom: 25px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+/* --- Social Icons with Icons Support --- */
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    /* Changed to flex for icon centering */
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #333;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    /* Adjusted for icon visibility */
+    transition: var(--transition);
+}
+
+/* Branded Hover Effects */
+.social-icons a[title="YouTube"]:hover {
+    background: #ff0000;
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-icons a[title="Instagram"]:hover {
+    background: #e1306c;
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-icons a[title="LinkedIn"]:hover {
+    background: #0077b5;
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Responsive Menu --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 75px;
+        right: -100%;
+        flex-direction: column;
+        background: var(--white);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        padding-top: 50px;
+        transition: 0.5s;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hero-split {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
