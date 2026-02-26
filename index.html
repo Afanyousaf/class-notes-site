@@ -81,10 +81,19 @@
     <section class="feedback" id="feedback">
         <div class="container">
             <h2 class="section-title">Student Feedback</h2>
-            <form class="feedback-form" action="https://formspree.io/f/mrearweb" method="post">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message or Suggestions" rows="5" required></textarea>
+            <form action="https://formspree.io/f/mrearweb" method="POST" class="feedback-form">
+
+                <label>Your Name:</label>
+                <input type="text" name="name" placeholder="Full Name" required>
+
+                <label>Your Email:</label>
+                <input type="email" name="email" placeholder="Email Address" required>
+
+                <label>Message:</label>
+                <textarea name="message" placeholder="How can I help you?" rows="5" required></textarea>
+
+                <input type="text" name="_gotcha" style="display:none" />
+
                 <button type="submit" class="btn">Send Feedback</button>
             </form>
         </div>
